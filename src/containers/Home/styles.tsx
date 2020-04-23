@@ -1,4 +1,4 @@
-import {View} from 'react-native';
+import {View, Animated} from 'react-native';
 import styled from 'styled-components/native';
 import {animated} from 'react-spring/native';
 import {Colors} from '../../themes';
@@ -8,12 +8,20 @@ export const HomeContainer = styled.View`
   max-height: 100%;
 `;
 
+export const AnimatedHeader = styled(Animated.View)`
+  position: absolute;
+  padding: 5px 18px;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+`;
+
 export const Header = styled.View`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  padding: 15px 18px;
+  margin-bottom: 5px;
 `;
 
 export const Title = styled.Text`
@@ -44,6 +52,7 @@ export const AvatarDownIcon = styled.Image`
 
 export const RestaurantList = styled.FlatList`
   padding: 0 18px;
+  padding-top: 85px;
 `;
 
 export const AnimatedView = animated(View);
